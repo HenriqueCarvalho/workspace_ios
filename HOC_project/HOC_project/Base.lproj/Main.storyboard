@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XPC-GZ-kjN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--menuViewSegue-->
+        <scene sceneID="fIM-Fh-Y3z">
+            <objects>
+                <viewController storyboardIdentifier="menuViewSegue" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPC-GZ-kjN" userLabel="menuViewSegue" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gli-Rw-vHO"/>
+                        <viewControllerLayoutGuide type="bottom" id="5be-83-LBO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SQe-vN-vdS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-grass.png" translatesAutoresizingMaskIntoConstraints="NO" id="N6j-ae-PjO">
+                                <rect key="frame" x="0.0" y="815" width="768" height="209"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEr-US-hsg">
+                                <rect key="frame" x="259" y="550" width="250" height="89"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <state key="normal" title="Start The Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTheGame:" destination="XPC-GZ-kjN" eventType="touchUpInside" id="Ish-TP-Qxj"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="t5v-7N-KwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rx-28-yne">
+                                <rect key="frame" x="290" y="647" width="189" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <state key="normal" title="See The Rank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seeTheRankTouched:" destination="XPC-GZ-kjN" eventType="touchUpInside" id="qJ2-bQ-4aC"/>
+                                    <segue destination="MG2-TP-sop" kind="show" id="ejf-0D-Jbu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcf-CL-vLx">
+                                <rect key="frame" x="333" y="718" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="About Us">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="aboutUsTouched:" destination="XPC-GZ-kjN" eventType="touchUpInside" id="zVE-yD-h2u"/>
+                                    <segue destination="GMf-gh-OzZ" kind="show" id="d6M-LP-l92"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stop The Jumpers Bunnies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OT-lx-GUX">
+                                <rect key="frame" x="167" y="187" width="435" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eXR-Cm-YdZ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ei8-rz-Ja2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2164" y="150"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhr-sa-mJF">
+                                <rect key="frame" x="90" y="24" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFw-WM-6lE">
+                                <rect key="frame" x="160" y="24" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYD-Ub-R0z">
+                                <rect key="frame" x="90" y="51" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-ac-0EV">
+                                <rect key="frame" x="160" y="51" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mole_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="wze-hN-Pdb" userLabel="img5">
+                                <rect key="frame" x="428" y="682" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mole_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-uV-wLQ" userLabel="img4">
+                                <rect key="frame" x="240" y="682" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-grass.png" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-Yz-77y" userLabel="block3">
+                                <rect key="frame" x="240" y="682" width="288" height="101"/>
+                                <color key="backgroundColor" red="0.22352942824363708" green="1" blue="0.98823535442352295" alpha="0.0" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mole_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="z9E-2t-4Wh" userLabel="img3">
+                                <rect key="frame" x="334" y="462" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-grass.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-W3-1QJ" userLabel="block2">
+                                <rect key="frame" x="240" y="462" width="288" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mole_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="lbq-ot-42w" userLabel="img1">
+                                <rect key="frame" x="240" y="255" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mole_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="AUT-nw-5vf" userLabel="img2">
+                                <rect key="frame" x="428" y="255" width="100" height="100"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-grass.png" translatesAutoresizingMaskIntoConstraints="NO" id="mmq-7Z-fup" userLabel="block1">
+                                <rect key="frame" x="240" y="255" width="288" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="vP3-fy-b7q" userLabel="home">
+                                <rect key="frame" x="620" y="24" width="42" height="42"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Cx3-u9-Qd6" appends="YES" id="Ahb-9j-k4l"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soundon.png" translatesAutoresizingMaskIntoConstraints="NO" id="OPJ-Jj-6Z8" userLabel="sound">
+                                <rect key="frame" x="680" y="28" width="38" height="38"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="urZ-bu-IHP" appends="YES" id="vrS-1R-apQ"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dzj-zS-v52"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="block1" destination="mmq-7Z-fup" id="ywa-Jj-po9"/>
+                        <outlet property="block2" destination="Ghd-W3-1QJ" id="b3H-ui-aUM"/>
+                        <outlet property="block3" destination="gNe-Yz-77y" id="bqo-IC-SqR"/>
+                        <outlet property="img1" destination="lbq-ot-42w" id="NaO-UV-Xgd"/>
+                        <outlet property="img2" destination="AUT-nw-5vf" id="94t-zG-J6s"/>
+                        <outlet property="img3" destination="z9E-2t-4Wh" id="nX9-BM-X1Z"/>
+                        <outlet property="img4" destination="oBd-uV-wLQ" id="WeE-SO-O3a"/>
+                        <outlet property="img5" destination="wze-hN-Pdb" id="yE8-HH-9jd"/>
+                        <outlet property="scoreLabel" destination="EZf-ac-0EV" id="ltI-rH-c9h"/>
+                        <outlet property="soundImg" destination="OPJ-Jj-6Z8" id="1DI-Y3-RPc"/>
+                        <outlet property="timeLabel" destination="zFw-WM-6lE" id="CMo-gA-3E3"/>
+                        <segue destination="XPC-GZ-kjN" kind="show" identifier="menuViewSegue" id="zgK-Sg-HXN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer delaysTouchesBegan="YES" id="Cx3-u9-Qd6">
+                    <connections>
+                        <action selector="getBackToMenu:" destination="vXZ-lx-hvc" id="6oQ-Fl-qEZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="urZ-bu-IHP">
+                    <connections>
+                        <action selector="playOrPauseSound:" destination="vXZ-lx-hvc" id="ex3-qH-Pj2"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1093" y="-994"/>
+        </scene>
+        <!--Rank Table View Controller-->
+        <scene sceneID="6o3-Y4-tfO">
+            <objects>
+                <viewController id="MG2-TP-sop" customClass="RankTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z6X-25-cGk"/>
+                        <viewControllerLayoutGuide type="bottom" id="1CA-Zf-Qwk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ozg-EH-FA9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="center" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" minimumZoomScale="3" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-1C-cpr">
+                                <rect key="frame" x="94" y="182" width="580" height="659"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.16679966335735563" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="Cell" textLabel="Moe-4n-WRN" detailTextLabel="Sbv-Ld-1zE" imageView="slX-Dq-LmK" style="IBUITableViewCellStyleSubtitle" id="kpu-hK-nqP">
+                                        <rect key="frame" x="0.0" y="0.0" width="477" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="kpu-hK-nqP" id="opt-rm-dbQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Moe-4n-WRN">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sbv-Ld-1zE">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="mole_3.png" id="slX-Dq-LmK">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MG2-TP-sop" id="pro-Ib-tcQ"/>
+                                    <outlet property="delegate" destination="MG2-TP-sop" id="7G9-ln-Utb"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-grass.png" translatesAutoresizingMaskIntoConstraints="NO" id="4jw-gz-Swj">
+                                <rect key="frame" x="0.0" y="815" width="768" height="209"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See Your Rank Here :)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeG-z6-ghi">
+                                <rect key="frame" x="221" y="78" width="326" height="64"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="48B-qF-w5R">
+                                <rect key="frame" x="94" y="28" width="42" height="42"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9H0-uQ-uhZ" appends="YES" id="qL5-lZ-2Z6"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwk-44-Go1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9H0-uQ-uhZ">
+                    <connections>
+                        <segue destination="XPC-GZ-kjN" kind="show" id="ztm-pn-f3k"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="164"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="rmq-et-XJg">
+            <objects>
+                <viewController id="GMf-gh-OzZ" customClass="AboutUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Z8-yl-AqI"/>
+                        <viewControllerLayoutGuide type="bottom" id="AXX-Vh-ChS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o05-3A-ufa">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76m-P9-Ou4">
+                                <rect key="frame" x="99" y="421" width="571" height="261"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The Stop The Jumpers Bunnies was developed by myself. It was created without game engine because this way I, Henrique Carvalho, could show my abilities in programming and my creativity.  
+
+"Thank you so much for to playing my game!" - Mario</string>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-e5-wpv">
+                                <rect key="frame" x="264" y="127" width="240" height="240"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="BLE-gu-h8R" userLabel="like">
+                                <rect key="frame" x="361" y="914" width="47" height="45"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sRz-Br-ccW" appends="YES" id="6b9-4H-ZX8"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yv0-Et-rz5">
+                                <rect key="frame" x="272" y="914" width="45" height="45"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zlt-Ne-uM2" appends="YES" id="XTE-G7-oaF"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleplus.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Rk-8x-MDl">
+                                <rect key="frame" x="449" y="914" width="45" height="45"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wMm-rq-a0J" appends="YES" id="UdO-RY-Efe"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="wWX-fp-Okd">
+                                <rect key="frame" x="108" y="28" width="42" height="42"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="X5j-e4-hvd" appends="YES" id="GA7-D8-7pD"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visit my fan page or contact me. :)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXO-TS-K2a">
+                                <rect key="frame" x="255" y="842" width="262" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Did you like my App ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFc-h4-FtB">
+                                <rect key="frame" x="300" y="793" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDy-tK-Mqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zlt-Ne-uM2">
+                    <connections>
+                        <action selector="emailTouched:" destination="GMf-gh-OzZ" id="mlc-kF-YPe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sRz-Br-ccW">
+                    <connections>
+                        <action selector="facebookTouched:" destination="GMf-gh-OzZ" id="pzj-fn-CQJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wMm-rq-a0J">
+                    <connections>
+                        <action selector="googlePlusTouched:" destination="GMf-gh-OzZ" id="IvA-QV-xo5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="X5j-e4-hvd">
+                    <connections>
+                        <segue destination="XPC-GZ-kjN" kind="show" id="DON-Fu-Uum"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="1344"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook.png" width="512" height="512"/>
+        <image name="googleplus.png" width="512" height="512"/>
+        <image name="green-grass.png" width="1920" height="756"/>
+        <image name="home.png" width="512" height="508"/>
+        <image name="mail.png" width="512" height="512"/>
+        <image name="mole_1.png" width="178" height="200"/>
+        <image name="mole_3.png" width="178" height="200"/>
+        <image name="profile.JPG" width="3264" height="2448"/>
+        <image name="soundon.png" width="512" height="512"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zgK-Sg-HXN"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,7 +1,7 @@
 # My iOS Apps
 
 ********* ********* ********* ********* ********* ********* ********* *********
-    HERE YOU CAN SEE ALL MY iOS APPS THAT I BUILT THIS SEMESTER
+    HERE YOU CAN SEE ALL MY iOS APPS
 ********* ********* ********* ********* ********* ********* ********* ********* 
 
 
